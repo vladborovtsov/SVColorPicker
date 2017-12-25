@@ -11,7 +11,7 @@ s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'sarath' => 'sarathvijayp@gmail.com' }
 s.source           = { :git => 'https://github.com/sarath-vijay/SVColorPicker.git', :tag => s.version.to_s }
 
-s.ios.deployment_target = '10.0'
+s.ios.deployment_target = '9.0'
 s.source_files = 'SVColorPicker/Classes/**/*'
 end
 

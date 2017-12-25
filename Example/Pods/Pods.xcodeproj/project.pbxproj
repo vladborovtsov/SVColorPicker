@@ -36,8 +36,8 @@
 		0DB56BCAC1AB870F9965EAF149140E51 /* SVColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVColorPicker-dummy.m"; sourceTree = "<group>"; };
 		1FAEBF1480B39AF7983552C2E954AE09 /* Pods-SVColorPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SVColorPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		229FB28088A1ADC4F85E2286FE5114A9 /* Pods-SVColorPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SVColorPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		27EADFDDB05E02456945748CD29AD534 /* Pods-SVColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SVColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
-		30874CE8EED39E2B787FEF46C68F0F5C /* Pods-SVColorPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SVColorPicker_Example.modulemap"; sourceTree = "<group>"; };
+		27EADFDDB05E02456945748CD29AD534 /* Pods-SVColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SVColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
+		30874CE8EED39E2B787FEF46C68F0F5C /* Pods-SVColorPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SVColorPicker_Example.modulemap"; sourceTree = "<group>"; };
 		3C1D86BE677BF1F677E77D5E8B53EE00 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		506BEE478DE947BF7AF04D1A54FD7635 /* Pods-SVColorPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SVColorPicker_Example-dummy.m"; sourceTree = "<group>"; };
 		561C43131A6FEDE0405F2C660033EF40 /* Pods-SVColorPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SVColorPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -48,14 +48,14 @@
 		717FB506E01DE1F3E19E45B83A686836 /* Pods-SVColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SVColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7C8049FEEBC17E36BF561178AACF3BF9 /* SVColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVColorPicker-umbrella.h"; sourceTree = "<group>"; };
 		832D4C06A3BD178ECE5A85DD17D75EED /* Pods-SVColorPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SVColorPicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		998992A572C5CDBE28B3AA3225139CC0 /* Pods-SVColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SVColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9CDF62143E271A2C28FC9D923441F76E /* SVColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVColorPicker.framework; path = SVColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CDF62143E271A2C28FC9D923441F76E /* SVColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13CA347BC2C8943009040EB002A2C34 /* Pods-SVColorPicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SVColorPicker_Tests-resources.sh"; sourceTree = "<group>"; };
-		B1B672D10ECB6641493D0A5E056A02BC /* SVColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SVColorPicker.modulemap; sourceTree = "<group>"; };
-		B70C2B3F78154772872C6BDD029CD741 /* Pods_SVColorPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SVColorPicker_Tests.framework; path = "Pods-SVColorPicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B672D10ECB6641493D0A5E056A02BC /* SVColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVColorPicker.modulemap; sourceTree = "<group>"; };
+		B70C2B3F78154772872C6BDD029CD741 /* Pods_SVColorPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVColorPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED2F59528E2629DFE3217216A6A499A /* Pods-SVColorPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SVColorPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C6A61A5E22CFA374ABDC1B02856313C9 /* Pods_SVColorPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SVColorPicker_Example.framework; path = "Pods-SVColorPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A61A5E22CFA374ABDC1B02856313C9 /* Pods_SVColorPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVColorPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD332EC1B24FA7B624089926C7718DA /* SVColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVColorPicker-prefix.pch"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CE0EB48916800D00CF0301464D617B01 /* Pods-SVColorPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SVColorPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 			children = (
 				67A8E53FACFC84C99292D1A44833CFF1 /* ColorPickerView.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -153,7 +152,6 @@
 			children = (
 				3B23AF6CEF2312E82797FC14013D1433 /* Classes */,
 			);
-			name = SVColorPicker;
 			path = SVColorPicker;
 			sourceTree = "<group>";
 		};
@@ -389,7 +387,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SVColorPicker_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SVColorPicker_Example/Pods-SVColorPicker_Example.modulemap";
@@ -424,7 +422,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SVColorPicker_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SVColorPicker_Example/Pods-SVColorPicker_Example.modulemap";
@@ -505,7 +503,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SVColorPicker/SVColorPicker-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SVColorPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVColorPicker/SVColorPicker.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -537,7 +535,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SVColorPicker/SVColorPicker-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SVColorPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVColorPicker/SVColorPicker.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -569,7 +567,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SVColorPicker_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SVColorPicker_Tests/Pods-SVColorPicker_Tests.modulemap";
@@ -604,7 +602,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SVColorPicker_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SVColorPicker_Tests/Pods-SVColorPicker_Tests.modulemap";
