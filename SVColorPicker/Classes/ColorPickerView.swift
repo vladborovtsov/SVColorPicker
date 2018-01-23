@@ -82,15 +82,6 @@ open class ColorPickerView: UIView {
     //MARK:-
     func onSliderValueChange(slider: UISlider) {
         
-        /*if  CGFloat(slider.value) <= 1.0 * splitCoefBW {
-            currentHueValue = CGFloat(slider.value) * (1.0 / splitCoefBW)
-            currentSliderColor = UIColor(hue: (currentHueValue), saturation: 1, brightness: 1, alpha: 1)
-        }else{
-            currentHueValue = ((CGFloat(slider.value) - 1.0 * splitCoefBW) * (1 / (1.0-splitCoefBW)) / 1.0)
-            currentSliderColor = UIColor(hue: 359.0, saturation: 0.0, brightness: CGFloat(currentHueValue), alpha: 1)
-        }*/
-        
-        
         if  CGFloat(slider.value) <= 1.0 * splitCoefBW {
              currentHueValue = 1.0 - CGFloat(slider.value) * (1.0 / splitCoefBW)
              currentSliderColor = UIColor(hue: 0.0, saturation: 0.0, brightness: (currentHueValue), alpha: 1)
@@ -99,11 +90,7 @@ open class ColorPickerView: UIView {
              currentSliderColor = UIColor(hue: (currentHueValue), saturation: 1.0, brightness: 1.0, alpha: 1)
          }
         
-        
-        //currentHueValue = CGFloat(slider.value) * (1 / 0.7)
-        //currentSliderColor = UIColor(hue: (currentHueValue), saturation: 1, brightness: 1, alpha: 1)
         self.didChangeColor?(currentSliderColor)
-        //print(((CGFloat(slider.value) - 1.0 * splitCoefBW) * (1 / (1.0-splitCoefBW)) / 1.0))
     }
 }
 
@@ -125,24 +112,13 @@ fileprivate extension ColorPickerView {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         UIBezierPath(roundedRect: rect, cornerRadius: heigthForSliderImage * 0.5).addClip()
         for x: Int in 0 ..< Int(size.width) {
-            
-            /*
-            if(x <= Int(size.width * splitCoefBW)){
-               UIColor(hue: CGFloat(CGFloat(x) / (size.width * 0.7)), saturation: 1.0, brightness: 1.0, alpha: 1.0).set()
-            }else{
-                UIColor(hue: 0.0, saturation: 0.0, brightness: ((CGFloat(x)-size.width * splitCoefBW) * (1 / (1.0-splitCoefBW)) / size.width), alpha: 1.0).set()
-                print(((CGFloat(x)-size.width * splitCoefBW) * (1 / (1.0-splitCoefBW)) / size.width))
-            }*/
- 
-            
+
             if(x <= Int(size.width * splitCoefBW)){
                 UIColor(hue: 0.0, saturation: 0.0, brightness: 1.0 - (CGFloat(CGFloat(x) / (size.width * splitCoefBW))), alpha: 1.0).set()
             }else{
                 UIColor(hue: ((CGFloat(x)-size.width * splitCoefBW) * (1 / (1.0-splitCoefBW)) / size.width), saturation: 1.0, brightness: 1.0, alpha: 1.0).set()
-                print(((CGFloat(x)-size.width * splitCoefBW) * (1 / (1.0-splitCoefBW)) / size.width))
             }
  
-            
             let temp = CGRect(x: CGFloat(x), y: 0, width: 1, height: size.height)
             UIRectFill(temp)
         }
