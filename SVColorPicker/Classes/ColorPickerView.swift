@@ -13,7 +13,7 @@ fileprivate enum ColorPickerViewConstant {
     static let uiSliderHeightDefault: CGFloat = 31.0
 }
 
-public typealias ColorChangeBlock = (_ color: UIColor?) -> Void
+public typealias ColorChangeBlock = (_ color: UIColor?, _ value: CGFloat) -> Void
 
 open class ColorPickerView: UIView {
     
@@ -28,6 +28,7 @@ open class ColorPickerView: UIView {
     //MARK:-
     fileprivate var currentHueValue : CGFloat = 0.0
     fileprivate var currentSliderColor = UIColor.red
+    fileprivate var currentSliderValue : CGFloat = 0.0
     fileprivate var hueImage: UIImage!
     fileprivate var slider: UISlider!
     
@@ -82,6 +83,8 @@ open class ColorPickerView: UIView {
     //MARK:-
     func onSliderValueChange(slider: UISlider) {
         
+        currentSliderValue = CGFloat(slider.value)
+        
         if  CGFloat(slider.value) <= 1.0 * splitCoefBW {
              currentHueValue = 1.0 - CGFloat(slider.value) * (1.0 / splitCoefBW)
              currentSliderColor = UIColor(hue: 0.0, saturation: 0.0, brightness: (currentHueValue), alpha: 1)
@@ -90,7 +93,7 @@ open class ColorPickerView: UIView {
              currentSliderColor = UIColor(hue: (currentHueValue), saturation: 1.0, brightness: 1.0, alpha: 1)
          }
         
-        self.didChangeColor?(currentSliderColor)
+        self.didChangeColor?(currentSliderColor, currentSliderValue)
     }
 }
 
