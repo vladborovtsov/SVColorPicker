@@ -84,8 +84,16 @@ open class ColorPickerView: UIView {
         slider.value = 0.0;
     }
     
-    public func setSliderValue(newValue: Float){
-        slider.value = newValue;
+    public func setSliderValue(newValue: Float, animated: Bool){
+        
+        if animated == true{
+            UIView.animate(withDuration: 0.25) {
+                self.slider.setValue(newValue, animated: true)
+            }
+        }else{
+            slider.value = newValue;
+        }
+        
     }
     
     //MARK:- Internal Functions
