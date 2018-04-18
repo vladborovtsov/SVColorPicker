@@ -81,8 +81,11 @@ open class ColorPickerView: UIView {
     
     
     public func resetSliderValue(){
-    
         slider.value = 0.0;
+    }
+    
+    public func setSliderValue(newValue: Float){
+        slider.value = newValue;
     }
     
     //MARK:- Internal Functions
