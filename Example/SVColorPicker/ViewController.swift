@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         // ColorPickerView initialisation
         let colorPickerframe = sliderContainerView.bounds
         let colorPicker = ColorPickerView(frame: colorPickerframe)
-        colorPicker.didChangeColor = { [unowned self] color in
+    
+        colorPicker.didChangeColor = { [unowned self] color, value in
             self.colorDisplayView.backgroundColor = color
         }
         sliderContainerView.addSubview(colorPicker)

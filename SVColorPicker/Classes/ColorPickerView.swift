@@ -22,7 +22,7 @@ open class ColorPickerView: UIView {
     /**
      User can use this value to change the slider height.
      */
-    open var colorPickerSliderHeight: CGFloat = 2.0 //Min value
+    @objc open var colorPickerSliderHeight: CGFloat = 2.0 //Min value
     
     //MARK:- Private variables
     //MARK:-
@@ -36,7 +36,7 @@ open class ColorPickerView: UIView {
     
     //MARK:- Open variables
     //MARK:-
-    open var didChangeColor: ColorChangeBlock?
+    @objc open var didChangeColor: ColorChangeBlock?
     
     //MARK:- Override Functions
     //MARK:-
@@ -80,11 +80,11 @@ open class ColorPickerView: UIView {
     }
     
     
-    public func resetSliderValue(){
+    @objc public func resetSliderValue(){
         slider.value = 0.0;
     }
     
-    public func setSliderValue(newValue: Float, animated: Bool){
+    @objc public func setSliderValue(newValue: Float, animated: Bool){
         
         if animated == true{
             UIView.animate(withDuration: 0.25) {
