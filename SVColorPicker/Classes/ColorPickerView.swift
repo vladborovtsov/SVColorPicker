@@ -98,6 +98,7 @@ open class ColorPickerView: UIView {
     
     //MARK:- Internal Functions
     //MARK:-
+    @objc
     func onSliderValueChange(slider: UISlider) {
         
         currentSliderValue = CGFloat(slider.value)
