@@ -13,7 +13,7 @@ fileprivate enum ColorPickerViewConstant {
     static let uiSliderHeightDefault: CGFloat = 31.0
 }
 
-public typealias ColorChangeBlock = (_ color: UIColor?) -> Void
+public typealias ColorChangeBlock = (_ color: UIColor?, _ value: CGFloat) -> Void
 
 open class ColorPickerView: UIView {
     
@@ -28,8 +28,11 @@ open class ColorPickerView: UIView {
     //MARK:-
     fileprivate var currentHueValue : CGFloat = 0.0
     fileprivate var currentSliderColor = UIColor.red
+    fileprivate var currentSliderValue : CGFloat = 0.0
     fileprivate var hueImage: UIImage!
     fileprivate var slider: UISlider!
+    
+    fileprivate var splitCoefBW: CGFloat = 0.3
     
     //MARK:- Open variables
     //MARK:-
@@ -76,13 +79,38 @@ open class ColorPickerView: UIView {
         
     }
     
+    
+    public func resetSliderValue(){
+        slider.value = 0.0;
+    }
+    
+    public func setSliderValue(newValue: Float, animated: Bool){
+        
+        if animated == true{
+            UIView.animate(withDuration: 0.25) {
+                self.slider.setValue(newValue, animated: true)
+            }
+        }else{
+            slider.value = newValue;
+        }
+        
+    }
+    
     //MARK:- Internal Functions
     //MARK:-
     func onSliderValueChange(slider: UISlider) {
         
-        currentHueValue = CGFloat(slider.value)
-        currentSliderColor = UIColor(hue: currentHueValue, saturation: 1, brightness: 1, alpha: 1)
-        self.didChangeColor?(currentSliderColor)
+        currentSliderValue = CGFloat(slider.value)
+        
+        if  CGFloat(slider.value) <= 1.0 * splitCoefBW {
+             currentHueValue = 1.0 - CGFloat(slider.value) * (1.0 / splitCoefBW)
+             currentSliderColor = UIColor(hue: 0.0, saturation: 0.0, brightness: (currentHueValue), alpha: 1)
+         }else{
+             currentHueValue = ((CGFloat(slider.value) - 1.0 * splitCoefBW) * (1 / (1.0-splitCoefBW)) / 1.0)
+             currentSliderColor = UIColor(hue: (currentHueValue), saturation: 1.0, brightness: 1.0, alpha: 1)
+         }
+        
+        self.didChangeColor?(currentSliderColor, currentSliderValue)
     }
 }
 
@@ -104,7 +132,13 @@ fileprivate extension ColorPickerView {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         UIBezierPath(roundedRect: rect, cornerRadius: heigthForSliderImage * 0.5).addClip()
         for x: Int in 0 ..< Int(size.width) {
-            UIColor(hue: CGFloat(CGFloat(x) / size.width), saturation: 1.0, brightness: 1.0, alpha: 1.0).set()
+
+            if(x <= Int(size.width * splitCoefBW)){
+                UIColor(hue: 0.0, saturation: 0.0, brightness: 1.0 - (CGFloat(CGFloat(x) / (size.width * splitCoefBW))), alpha: 1.0).set()
+            }else{
+                UIColor(hue: ((CGFloat(x)-size.width * splitCoefBW) * (1 / (1.0-splitCoefBW)) / size.width), saturation: 1.0, brightness: 1.0, alpha: 1.0).set()
+            }
+ 
             let temp = CGRect(x: CGFloat(x), y: 0, width: 1, height: size.height)
             UIRectFill(temp)
         }
